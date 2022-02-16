@@ -9,4 +9,4 @@ if (process.env.NODE_ENV == 'development') {
 import '../sass/style.sass'
 
 // other scripts
-import './test/test'
+//import './test/test'
