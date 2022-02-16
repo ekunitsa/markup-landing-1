@@ -9,4 +9,12 @@ Result url - (need add)
 - npm i
 - npm run build
 
+# СSS methodology - ECSS
+Documentation-presentation https://ecss.benfrain.com/
+
+With some nuances:
+- camelCase
+- desktop first
+- "is-" handle states
+
 Work in progress...
