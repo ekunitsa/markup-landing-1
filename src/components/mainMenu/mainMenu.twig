@@ -1,5 +1,5 @@
 <div class="lan-mainMenu">
   {% for item in menu %}
-    <div>{{ item.text }}</div>
+    <a href="{{ item.link }}" class="lan-mainMenu_link">{{ item.text }}</a>
   {% endfor %}
 </div>

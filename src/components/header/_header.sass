@@ -1,3 +1,97 @@
 $mainClass: '.lan-header'
 
+$space: 38px
+
+@mixin redline
+  content: ''
+  position: absolute
+  top: calc(50% - 34px)
+  right: 0
+  width: 1px
+  height: 68px
+  background-color: $clrRed
+
 #{$mainClass}
+  background-color: $clrWhite09
+  box-shadow: 0px 4px 16px rgba(199, 199, 199, 0.44)
+  padding: 15px 0
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  &_top
+    display: flex
+    //justify-content: space-between
+    align-items: center
+  &_logo
+    position: relative
+    padding-right: $space
+    &:after
+      @include redline
+  &_desc
+    font-weight: 600
+    font-size: 12px
+    line-height: 16px
+    text-transform: uppercase
+    margin-top: 8px
+  &_time
+    font-weight: 600
+    font-size: 15px
+    line-height: 25px
+    padding-left: $space
+    padding-right: $space
+    position: relative
+    &:after
+      @include redline
+  &_place
+    font-weight: 600
+    font-size: 15px
+    line-height: 25px
+    padding-left: 90px
+    padding-right: $space
+    background: url(../../img/header/point.svg) no-repeat 30px center
+    min-height: 50px
+    position: relative
+    max-width: 230px
+    &:after
+      @include redline
+  &_calc
+    padding-left: $space
+    padding-right: $space
+    position: relative
+    &:after
+      @include redline
+  &_calcBtn
+    background-color: $clrRed
+    color: $clrWhite
+    font-weight: 700
+    font-size: 14px
+    border-radius: 5px
+    padding: 17px 18px
+    text-decoration: none
+    white-space: nowrap
+    &:hover
+      background-color: $clrRedBlack
+  &_phones
+    padding-left: $space
+    text-align: right
+  &_phone
+    font-weight: 600
+    font-size: 20px
+    line-height: 25px
+    margin-bottom: 4px
+    white-space: nowrap
+    display: block
+    color: $clrBlack
+    text-decoration: none
+    &:hover
+      color: $clrRedBlack
+  &_callback
+    font-weight: 600
+    font-size: 14px
+    line-height: 25px
+    color: $clrRed
+    &:hover
+      text-decoration: none
+  &_bottom
+    margin-top: 35px

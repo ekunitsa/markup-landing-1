@@ -1,3 +1,17 @@
 $mainClass: '.lan-mainMenu'
 
 #{$mainClass}
+  display: flex
+  justify-content: space-between
+  border-bottom: 1px solid $clrRed
+  &_link
+    font-weight: 400
+    font-size: 20px
+    line-height: 27px
+    color: $clrBlack
+    text-decoration: none
+    text-transform: uppercase
+    padding-bottom: 12px
+    border-bottom: 3px solid white
+    &:hover, &.is-active
+      border-bottom: 3px solid $clrRed

@@ -65,6 +65,9 @@ module.exports =  {
           MiniCssExtractPlugin.loader,
           'css-loader',
           {
+            loader: 'resolve-url-loader',
+          },
+          {
             loader: 'sass-loader',
             options: {
               sourceMap: true,
@@ -79,6 +82,10 @@ module.exports =  {
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
         type: 'asset/resource',
+        // images from sass
+        generator: {
+          filename: 'img/insass/[name].[hash][ext]',
+        },
       },
       /** Fonts */
       {
@@ -95,7 +102,7 @@ module.exports =  {
           'raw-loader',
           'twig-html-loader'
         ]
-      }
+      },
     ],
   },
   optimization: {
@@ -110,9 +117,39 @@ module.exports =  {
         },
         extractComments: false,
       }),
-      // compress SVG, create webp and avif
+      // create webp and avif automatically for html\twig
+      new ImageMinimizerPlugin({
+        test: /\.(jpe?g|png)$/i,
+        deleteOriginalAssets: false,
+        generator: [
+          {
+            type: "asset",
+            preset: "webp",
+            implementation: ImageMinimizerPlugin.imageminGenerate,
+            options: {
+              plugins: [
+                ["imagemin-webp",
+                  {
+                    quality: 90
+                  }
+                ]
+              ],
+            },
+          },
+          {
+            type: "asset",
+            preset: "avif",
+            implementation: ImageMinimizerPlugin.imageminGenerate,
+            options: {
+              plugins: ["imagemin-avif"],
+            },
+          },
+        ],
+      }),
+      // compress SVG, jpeg and png
       new ImageMinimizerPlugin({
         test: /\.(svg|jpe?g|png)$/i,
+        deleteOriginalAssets: false,
         minimizer: {
           implementation: ImageMinimizerPlugin.imageminMinify,
           options: {
@@ -143,10 +180,14 @@ module.exports =  {
             ],
           },
         },
+      }),
+      // create webp and avif with "as..." params (for sass\css)
+      new ImageMinimizerPlugin({
+        test: /\.(jpe?g|png)$/i,
         deleteOriginalAssets: false,
         generator: [
           {
-            type: "asset",
+            type: "import",
             preset: "webp",
             implementation: ImageMinimizerPlugin.imageminGenerate,
             options: {
@@ -160,7 +201,7 @@ module.exports =  {
             },
           },
           {
-            type: "asset",
+            type: "import",
             preset: "avif",
             implementation: ImageMinimizerPlugin.imageminGenerate,
             options: {

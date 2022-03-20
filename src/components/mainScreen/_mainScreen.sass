@@ -1,3 +1,27 @@
 $mainClass: '.lan-mainScreen'
 
 #{$mainClass}
+  background:
+    repeat: no-repeat
+    position: top center
+  background-size: 1920px 912px
+  min-height: 912px
+  padding-top: 250px
+
+.fallback
+  #{$mainClass}
+    background-image: url(../../img/mainScreen/main.jpg)
+    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)
+      background-image: url(../../img/mainScreen/main@2x.jpg)
+
+.webp
+  #{$mainClass}
+    background-image: url(../../img/mainScreen/main.jpg?as=webp)
+    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)
+      background-image: url(../../img/mainScreen/main@2x.jpg?as=webp)
+
+.avif
+  #{$mainClass}
+    background-image: url(../../img/mainScreen/main.jpg?as=avif)
+    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)
+      background-image: url(../../img/mainScreen/main@2x.jpg?as=avif)

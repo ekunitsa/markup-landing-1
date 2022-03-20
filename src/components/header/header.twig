@@ -1,5 +1,64 @@
-<div class="lan-header">
+<!-- variables -->
+{% set menu = {
+  'menu': [
+    {
+      'link': 'javascript:',
+      'text': 'Prices'
+    },
+    {
+      'link': 'javascript:',
+      'text': 'Promotion'
+    },
+    {
+      'link': 'javascript:',
+      'text': 'Materials'
+    },
+    {
+      'link': 'javascript:',
+      'text': 'How to order'
+    },
+    {
+      'link': 'javascript:',
+      'text': 'Our works'
+    },
+    {
+      'link': 'javascript:',
+      'text': 'Reviews'
+    },
+    {
+      'link': 'javascript:',
+      'text': 'Contacts'
+    },
+  ]
+} %}
+
+<header class="lan-header">
   <div class="lan-base_wrapper">
-    {% include '../mainMenu/mainMenu.twig' with menu %}
+    <div class="lan-header_top">
+      <div class="lan-header_logo">
+        <img src="./img/header/logo.svg" alt="">
+        <div class="lan-header_desc">Kitchens to order in Krasnodar</div>
+      </div>
+      <div class="lan-header_time">
+        We answer calls<br>
+        from&nbsp;9:00 to&nbsp;21:00<br>
+        seven days a&nbsp;week
+      </div>
+      <div class="lan-header_place">
+        Krasnodar,<br> st.&nbsp;Red Partizans, 483
+      </div>
+      <div class="lan-header_calc">
+        <a href="javascript:" class="lan-header_calcBtn">Calculate the cost</a>
+      </div>
+      <div class="lan-header_phones">
+        <a href="tel:+78612179376" class="lan-header_phone">+7 (8612) 17-93-76</a>
+        <a href="tel:+79892779430" class="lan-header_phone">+7 (989) 277-94-30</a>
+        <a href="javascript:" class="lan-header_callback">Call you back?</a>
+      </div>
+    </div>
+
+    <div class="lan-header_bottom">
+      {% include '../mainMenu/mainMenu.twig' with menu %}
+    </div>
   </div>
-</div>
+</header>
