@@ -2,15 +2,6 @@ $mainClass: '.lan-header'
 
 $space: 38px
 
-@mixin redline
-  content: ''
-  position: absolute
-  top: calc(50% - 34px)
-  right: 0
-  width: 1px
-  height: 68px
-  background-color: $clrRed
-
 #{$mainClass}
   background-color: $clrWhite09
   box-shadow: 0px 4px 16px rgba(199, 199, 199, 0.44)
@@ -19,15 +10,13 @@ $space: 38px
   top: 0
   left: 0
   width: 100%
+  z-index: 100
   &_top
     display: flex
-    //justify-content: space-between
+    justify-content: space-between
     align-items: center
   &_logo
     position: relative
-    padding-right: $space
-    &:after
-      @include redline
   &_desc
     font-weight: 600
     font-size: 12px
@@ -38,29 +27,16 @@ $space: 38px
     font-weight: 600
     font-size: 15px
     line-height: 25px
-    padding-left: $space
-    padding-right: $space
     position: relative
-    &:after
-      @include redline
   &_place
     font-weight: 600
     font-size: 15px
     line-height: 25px
-    padding-left: 90px
-    padding-right: $space
-    background: url(../../img/header/point.svg) no-repeat 30px center
+    padding-left: 60px
+    background: url(../../img/header/point.svg) no-repeat 0 center
     min-height: 50px
     position: relative
     max-width: 230px
-    &:after
-      @include redline
-  &_calc
-    padding-left: $space
-    padding-right: $space
-    position: relative
-    &:after
-      @include redline
   &_calcBtn
     background-color: $clrRed
     color: $clrWhite
@@ -73,7 +49,6 @@ $space: 38px
     &:hover
       background-color: $clrRedBlack
   &_phones
-    padding-left: $space
     text-align: right
   &_phone
     font-weight: 600
@@ -95,3 +70,91 @@ $space: 38px
       text-decoration: none
   &_bottom
     margin-top: 35px
+  &_separator
+    width: 1px
+    height: 68px
+    background-color: $clrRed
+  &_burger
+    display: none
+  @media all and (max-width: 1200px)
+    &_logoImg
+      max-width: 130px
+    &_desc
+      font-weight: 600
+      font-size: 8px
+      line-height: 11px
+    &_time
+      font-size: 10px
+      line-height: 18px
+    &_place
+      font-size: 10px
+      line-height: 18px
+      min-height: 32px
+      background-size: 32px 32px
+      padding-left: 45px
+    &_calcBtn
+      font-weight: 700
+      font-size: 10px
+      line-height: 100%
+      padding: 8px 11px
+    &_phone
+      font-size: 18px
+      line-height: 25px
+    &_callback
+      font-size: 12px
+  @media all and (max-width: 767px)
+    position: relative
+    min-height: 176px
+    &_separator
+      display: none
+    &_top
+      display: block
+    &_bottom
+      margin-top: 0px
+    &_logo
+      position: absolute
+      top: 0
+      left: 15px
+    &_time
+      position: absolute
+      top: 80px
+      left: 15px
+      line-height: 13px
+      br:nth-child(2)
+        display: none
+    &_place
+      position: absolute
+      top: 121px
+      left: 15px
+      background-size: 19px 19px
+      font-weight: 400
+      font-size: 9px
+      line-height: 125%
+      min-height: 19px
+      padding-left: 30px
+    &_burger
+      display: block
+      width: 35px
+      height: 35px
+      background: url(../../img/header/menu.svg) no-repeat center center
+      position: absolute
+      top: 0px
+      right: 15px
+      cursor: pointer
+    &_phones
+      position: absolute
+      top: 48px
+      right: 15px
+    &_desc
+      margin-top: 6px
+    &_phone
+      font-size: 14px
+      line-height: 100%
+      margin-bottom: 6px
+    &_callback
+      font-size: 12px
+      line-height: 100%
+    &_calc
+      position: absolute
+      top: 120px
+      right: 15px

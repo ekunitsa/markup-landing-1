@@ -1,3 +1,93 @@
 $mainClass: '.lan-form'
 
 #{$mainClass}
+  padding: 20px
+  background: $clrWhite
+  box-shadow: 0px 0px 23px rgba(148, 148, 148, 0.17)
+  border-radius: 10px
+  max-width: 490px
+  text-align: center
+  &_title
+    font-weight: 800
+    font-size: 24px
+    line-height: 137%
+    color: $clrRed
+    margin-bottom: 7px
+  &_desc
+    font-weight: 600
+    font-size: 18px
+    line-height: 137%
+    margin-bottom: 7px
+  &_date
+    font-weight: 400
+    font-size: 16px
+    line-height: 137%
+    margin-bottom: 18px
+  &_inputs
+    display: flex
+    width: 100%
+  &_inputText
+    width: 100%
+  &_inputSubmit
+    background-color: $clrRed
+    border-radius: 0px 5px 5px 0px
+    border: 0px
+    padding: 20px 35px
+    font-weight: 700
+    font-size: 15px
+    line-height: 100%
+    color: $clrWhite
+    height: 54px
+    transition: all, 0.2s
+    &:hover
+      background-color: $clrRedBlack
+      cursor: pointer
+  &_inputText
+    height: 54px
+    padding: 20px 25px
+    background: $clrWhite
+    border: 1px solid $clrRed
+    box-sizing: border-box
+    border-radius: 5px 0px 0px 5px
+    font-weight: 400
+    font-size: 15px
+    line-height: 100%
+  @media all and (max-width: 1200px)
+    max-width: 420px
+    &_title
+      font-size: 20px
+    &_desc
+      font-size: 16px
+    &_date
+      font-size: 14px
+    &_inputText
+      font-size: 13px
+      padding: 20px 20px
+    &_inputSubmit
+      font-size: 13px
+  @media all and (max-width: 767px)
+    max-width: calc(100% + 30px)
+    border-radius: 0
+    box-shadow: none
+    position: relative
+    z-index: 10
+    padding:
+      bottom: 0
+    margin:
+      left: -15px
+      right: -15px
+    &_inputs
+      flex-direction: column
+      padding:
+        left: 45px
+        right: 45px
+    &_inputText
+      margin-bottom: 10px
+      background: $clrGrayBg
+      border-radius: 5px
+      height: 48px
+      padding: 13px 20px
+    &_inputSubmit
+      border-radius: 5px
+      height: 48px
+      padding: 13px 20px

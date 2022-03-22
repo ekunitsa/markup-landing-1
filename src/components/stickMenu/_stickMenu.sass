@@ -1,0 +1,53 @@
+$mainClass: '.lan-stickMenu'
+
+#{$mainClass}
+  background-color: rgba(255,255,255,.9)
+  box-shadow: 0 4px 16px rgb(199 199 199 / 44%)
+  padding: 15px 0
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  height: 80px
+  z-index: 1000
+  transition: all, 0.5s
+  margin-top: -80px
+  &_flex
+    display: flex
+  &_logoImg
+    height: 50px
+  &_logo
+    margin-right: 20px
+  &_list
+    display: flex
+    justify-content: space-between
+    border-bottom: 1px solid $clrRed
+    width: 100%
+  &_link
+    font-weight: 400
+    font-size: 20px
+    line-height: 27px
+    color: $clrBlack
+    text-decoration: none
+    text-transform: uppercase
+    padding-bottom: 12px
+    border-bottom: 3px solid transparent
+    margin-bottom: -1px
+    padding-top: 9px
+    &:hover, &.is-active
+      border-bottom: 3px solid $clrRed
+  &_stick
+    margin-top: 0
+  @media all and (max-width: 1200px)
+    height: 65px
+    margin-top: -65px
+    &_link
+      font-size: 15px
+      line-height: 20px
+      padding-top: 0
+    &_logo
+      display: none
+    &_stick
+      margin-top: 0
+  @media all and (max-width: 767px)
+    display: none

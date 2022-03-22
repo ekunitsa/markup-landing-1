@@ -6,6 +6,7 @@ const CopyPlugin = require('copy-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 const ImageMinimizerPlugin = require("image-minimizer-webpack-plugin");
 const { extendDefaultPlugins } = require("svgo");
+const webpack = require('webpack');
 
 /* settings */
 const pages = ['index']; // + in main.js for watcher
@@ -14,7 +15,7 @@ const mode = process.env.NODE_ENV;
 
 module.exports =  {
   context: path.resolve(__dirname, 'src'),
-  entry: './js/main.js',
+  entry: ['./js/main.js'],
   mode: mode,
   devtool: 'inline-source-map',
   devServer: {
@@ -213,6 +214,11 @@ module.exports =  {
     ],
   },
   plugins: [].concat(
+    // add jq
+    new webpack.ProvidePlugin({
+      $: "jquery",
+      jQuery: "jquery"
+    }),
     // clear dist folder
     new CleanWebpackPlugin(),
     // convert twig templates to html

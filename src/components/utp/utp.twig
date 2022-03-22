@@ -1,5 +1,26 @@
-<div class="lan-utp">
+{% set utp = [
+    {
+      'text': '0% installment <br>up&nbsp;to 12&nbsp;months'
+    },
+    {
+      'text': 'Kitchen installation <br>from&nbsp;2013'
+    },
+    {
+      'text': 'Free <br>installation'
+    },
+    {
+      'text': 'Lifetime <br>20&nbsp;years'
+    },
+] %}
+
+
+<section class="lan-utp">
   <div class="lan-base_wrapper">
-    utp
+    <div class="lan-utp_list">
+      {% for item in utp %}
+        {% include '../../components/utpItem/utpItem.twig' %}
+      {% endfor %}
+    </div>
   </div>
-</div>
+</section>
+

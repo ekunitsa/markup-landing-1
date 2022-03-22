@@ -12,6 +12,13 @@ $mainClass: '.lan-mainMenu'
     text-decoration: none
     text-transform: uppercase
     padding-bottom: 12px
-    border-bottom: 3px solid white
+    border-bottom: 3px solid transparent
+    margin-bottom: -1px
     &:hover, &.is-active
       border-bottom: 3px solid $clrRed
+  @media all and (max-width: 1200px)
+    &_link
+      font-size: 15px
+      line-height: 20px
+  @media all and (max-width: 767px)
+    display: none

@@ -8,5 +8,5 @@ if (process.env.NODE_ENV == 'development') {
 // global style file
 import '../sass/style.sass'
 
-// other scripts
-//import './test/test'
+// js
+import '../components/stickMenu/stickMenu'

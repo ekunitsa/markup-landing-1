@@ -25,10 +25,49 @@
     <link href="./css/style.css" rel="stylesheet" type="text/css">
   </head>
   <body>
+    <!-- variables -->
+    {% set menu = [
+      {
+        'link': 'javascript:',
+        'text': 'Prices'
+      },
+      {
+        'link': 'javascript:',
+        'text': 'Promotion'
+      },
+      {
+        'link': 'javascript:',
+        'text': 'Materials'
+      },
+      {
+        'link': 'javascript:',
+        'text': 'How to order'
+      },
+      {
+        'link': 'javascript:',
+        'text': 'Our works'
+      },
+      {
+        'link': 'javascript:',
+        'text': 'Reviews'
+      },
+      {
+        'link': 'javascript:',
+        'text': 'Contacts'
+      },
+    ]
+    %}
+
     <!-- page -->
-    {% include 'components/header/header.twig' %}
+    {% include 'components/stickMenu/stickMenu.twig' with menu %}
+    {% include 'components/header/header.twig' with menu %}
     <main>
       {% include 'components/mainScreen/mainScreen.twig'%}
+      {% include 'components/utp/utp.twig'%}
+      <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+      <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+      <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+      <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     </main>
     
     <!-- global scripts -->
