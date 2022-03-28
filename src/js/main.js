@@ -10,3 +10,5 @@ import '../sass/style.sass'
 
 // js
 import '../components/stickMenu/stickMenu'
+import '../components/modal/modal'
+import '../components/toTop/toTop'
