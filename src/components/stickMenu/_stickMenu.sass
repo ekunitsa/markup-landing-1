@@ -38,7 +38,7 @@ $mainClass: '.lan-stickMenu'
       border-bottom: 3px solid $clrRed
   &_stick
     margin-top: 0
-  @media all and (max-width: 1200px)
+  @media all and (max-width: $sizeTablet)
     height: 65px
     margin-top: -65px
     &_link
@@ -49,5 +49,5 @@ $mainClass: '.lan-stickMenu'
       display: none
     &_stick
       margin-top: 0
-  @media all and (max-width: 767px)
+  @media all and (max-width: $sizePhone)
     display: none

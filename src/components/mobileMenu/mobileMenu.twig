@@ -1,0 +1,10 @@
+<div class="lan-mobileMenu js-mobileMenu">
+  <div class="lan-mobileMenu_closeWrapper">
+    <div class="lan-mobileMenu_close js-mobileMenuClose"></div>
+  </div>
+  <div class="lan-mobileMenu_list">
+    {% for item in menu %}
+      <a href="{{ item.link }}" class="lan-mobileMenu_item">{{ item.text }}</a>
+    {% endfor %}
+  </div>
+</div>

@@ -1,0 +1,41 @@
+$mainClass: '.lan-mobileMenu'
+
+#{$mainClass}
+  position: fixed
+  top: 0
+  right: 0
+  width: 80%
+  margin-right: -80%
+  overflow: hidden
+  background-color: white
+  height: 100%
+  z-index: 1005
+  padding: 20px
+  transition: all, 0.2s
+  &.is-active
+    margin-right: 0
+  &_closeWrapper
+    display: flex
+    justify-content: flex-end
+  &_close
+    width: 35px
+    height: 35px
+    background:
+      image: url(../../img/header/close.svg)
+      repeat: no-repeat
+      position: center center
+    cursor: pointer
+    margin-bottom: 20px
+  &_list
+    max-height: calc(100vh - 95px)
+    overflow: auto
+  &_item
+    font-size: 15px
+    width: 100%
+    display: inline-block
+    margin-bottom: 15px
+    padding: 10px 0
+    border-bottom: 1px solid $clrRed
+    text-decoration: none
+    color: $clrBlack
+    text-transform: uppercase

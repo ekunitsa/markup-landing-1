@@ -52,7 +52,7 @@ $mainClass: '.lan-form'
     font-weight: 400
     font-size: 15px
     line-height: 100%
-  @media all and (max-width: 1200px)
+  @media all and (max-width: $sizeTablet)
     max-width: 420px
     &_title
       font-size: 20px
@@ -65,7 +65,7 @@ $mainClass: '.lan-form'
       padding: 20px 20px
     &_inputSubmit
       font-size: 13px
-  @media all and (max-width: 767px)
+  @media all and (max-width: $sizePhone)
     max-width: calc(100% + 30px)
     border-radius: 0
     box-shadow: none

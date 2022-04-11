@@ -37,7 +37,7 @@ $mainClass: '.lan-mainScreen'
       background-image: url(../../img/mainScreen/i3.svg)
     &:last-child
       margin-bottom: 0
-  @media all and (max-width: 1200px)
+  @media all and (max-width: $sizeTablet)
     padding-top: 200px
     background-position: top right -300px
     background-size: auto 730px
@@ -61,7 +61,7 @@ $mainClass: '.lan-mainScreen'
         background-size: 26px 26px
       &Icon3
         background-size: 27px 29px
-  @media all and (max-width: 767px)
+  @media all and (max-width: $sizePhone)
     min-height: 330px
     padding-top: 40px
     padding-bottom: 0
@@ -70,7 +70,7 @@ $mainClass: '.lan-mainScreen'
     position: relative
     &:before
       content: ''
-      background: linear-gradient(270deg, rgba(250, 250, 250, 0.82) 58.56%, rgba(255, 255, 255, 0) 75.24%)
+      background: linear-gradient(270deg, rgba(250, 250, 250, 0.82) 58.56%, rgba(255, 255, 255, 0) 100%)
       transform: matrix(-1, 0, 0, 1, 0, 0)
       height: 100%
       width: 100%

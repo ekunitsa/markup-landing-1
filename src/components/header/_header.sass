@@ -41,7 +41,7 @@ $space: 38px
     background-color: $clrRed
     color: $clrWhite
     font-weight: 700
-    font-size: 14px
+    font-size: 15px
     border-radius: 5px
     padding: 17px 18px
     text-decoration: none
@@ -76,7 +76,7 @@ $space: 38px
     background-color: $clrRed
   &_burger
     display: none
-  @media all and (max-width: 1200px)
+  @media all and (max-width: $sizeTablet)
     &_logoImg
       max-width: 130px
     &_desc
@@ -102,7 +102,7 @@ $space: 38px
       line-height: 25px
     &_callback
       font-size: 12px
-  @media all and (max-width: 767px)
+  @media all and (max-width: $sizePhone)
     position: relative
     min-height: 176px
     &_separator

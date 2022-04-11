@@ -4,7 +4,61 @@ $mainClass: '.lan-modal'
   &_wrapper
     position: relative
     background: #FFF
-    padding: 20px
-    width: auto
-    max-width: 500px
-    margin: 20px auto
+    width: 100%
+    border-radius: 10px
+    margin: 0 auto
+    &Small
+      padding: 45px
+      max-width: 490px
+      text-align: center
+      line-height: 29px
+  &_text
+    margin-bottom: 20px
+    font-weight: 400
+    font-size: 22px
+  &_smallForm
+    &Input
+      width: 100%
+      border: 1px solid #000000
+      box-sizing: border-box
+      border-radius: 5px
+      padding: 17px
+      text-align: center
+      height: 54px
+      margin-bottom: 10px
+      font-weight: 400
+      font-size: 15px
+    &Submit
+      background-color: $clrRed
+      border-radius: 5px
+      border: 0px
+      padding: 20px 35px
+      font-weight: 700
+      font-size: 15px
+      line-height: 100%
+      color: $clrWhite
+      height: 54px
+      transition: all, 0.2s
+      width: 100%
+      &:hover
+        background-color: $clrRedBlack
+        cursor: pointer
+  @media all and (max-width: $sizeTablet)
+    &_wrapper
+      &Small
+        padding: 40px
+    &_text
+      font-size: 20px
+      line-height: 26px
+  @media all and (max-width: $sizePhone)
+    &_wrapper
+      &Small
+        padding: 40px 20px
+    &_text
+      font-size: 16px
+      line-height: 22px
+    &_smallForm
+      &Input
+        font-size: 13px
+      &Submit
+        font-size: 13px
