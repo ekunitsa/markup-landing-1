@@ -1,5 +1,9 @@
 $mainClass: '.lan-modal'
 
+.svg-form
+  *
+    transition: all, 0.2s
+
 #{$mainClass}
   &_wrapper
     position: relative
@@ -12,6 +16,9 @@ $mainClass: '.lan-modal'
       max-width: 490px
       text-align: center
       line-height: 29px
+    &Large
+      padding: 45px
+      max-width: 900px
   &_text
     margin-bottom: 20px
     font-weight: 400
@@ -43,16 +50,204 @@ $mainClass: '.lan-modal'
       &:hover
         background-color: $clrRedBlack
         cursor: pointer
+  &_title
+    font-weight: 800
+    font-size: 32px
+    line-height: 37px
+    margin-bottom: 40px
+  &_box
+    background: #FFFFFF
+    border: 1px solid #E4E4E4
+    box-sizing: border-box
+    box-shadow: 0px 4px 25px rgba(184, 184, 184, 0.25)
+    border-radius: 15px
+    margin-bottom: 30px
+    padding: 25px
+    &Title
+      font-weight: 600
+      font-size: 16px
+      line-height: 100%
+      margin-bottom: 25px
+  &_boxStyle
+    &List
+      display: flex
+      justify-content: space-between
+    &ImgSrc
+      width: 100%
+      max-width: 160px
+      display: block
+    &OneElem
+      width: 160px
+      box-shadow: 0px 4px 25px rgba(164, 164, 164, 0.24)
+      transition: all, 0.2s
+      border-radius: 7px
+      overflow: hidden
+      background-color: $clrWhite
+      &:hover
+        background-color: $clrRed
+        cursor: pointer
+        #{$mainClass}
+          &_boxStyle
+            &Text
+              color: white
+    &Radio
+      display: none
+      + label
+        border-radius: 7px
+      &:checked
+        + label
+
+          cursor: pointer
+          #{$mainClass}
+            &_boxStyle
+              &OneElem
+                background-color: $clrRed
+              &Text
+                color: white
+    &Text
+      padding: 10px
+      font-weight: 400
+      font-size: 14px
+      color: $clrLightGray
+  &_boxForm
+    &List
+      display: flex
+      justify-content: space-between
+    &Text
+      font-weight: 400
+      font-size: 12px
+      color: $clrLightGray
+    &OneElem
+      text-align: center
+      &:hover
+        cursor: pointer
+        #{$mainClass}
+          &_boxForm
+            &Img
+              background-color: $clrRed
+              .svg-form
+                *
+                  fill: white
+    &Img
+      background: #FFFFFF
+      box-shadow: 0px 4px 25px rgba(164, 164, 164, 0.24)
+      border-radius: 50%
+      margin-bottom: 12px
+      width: 70px
+      height: 70px
+      display: inline-flex
+      justify-content: center
+      align-items: center
+      transition: all, 0.2s
+    &Radio
+      display: none
+      + label
+        border-radius: 7px
+      &:checked
+        + label
+          #{$mainClass}
+            &_boxForm
+              &Img
+                background-color: $clrRed
+                .svg-form
+                  *
+                    fill: white
+  &_boxArea
+    &List
+      display: flex
+    &Radio
+      display: none
+      &:checked
+        + label
+          #{$mainClass}
+            &_boxArea
+              &Text
+                background-color: $clrRed
+                color: $clrWhite
+    &OneElem
+      margin-right: 40px
+    &Text
+      font-weight: 600
+      font-size: 14px
+      line-height: 100%
+      padding: 15px
+      min-width: 132px
+      box-shadow: 0px 4px 25px rgba(164, 164, 164, 0.24)
+      border-radius: 25px
+      background-color: $clrWhite
+      transition: all, 0.2s
+      cursor: pointer
+      text-align: center
+      color: $clrRed
+      &:hover
+        background-color: $clrRed
+        color: $clrWhite
+  &_desc
+    font-weight: 400
+    font-size: 18px
+    line-height: 140%
+    margin-bottom: 25px
+    max-width: 370px
+  &_largeForm
+    &Input
+      height: 54px
+      padding: 20px 25px
+      background: #fff
+      border: 1px solid $clrBlack
+      box-sizing: border-box
+      border-radius: 5px
+      font-weight: 400
+      font-size: 15px
+      line-height: 100%
+      width: 100%
+      max-width: 240px
+      text-align: center
+      margin-right: 10px
+    &Submit
+      background-color: $clrRed
+      border-radius: 5px
+      border: 0px
+      padding: 20px 35px
+      font-weight: 700
+      font-size: 15px
+      line-height: 100%
+      color: $clrWhite
+      height: 54px
+      transition: all, 0.2s
+      &:hover
+        background-color: $clrRedBlack
+        cursor: pointer
   @media all and (max-width: $sizeTablet)
     &_wrapper
       &Small
         padding: 40px
+      &Large
+        padding: 40px
     &_text
       font-size: 20px
       line-height: 26px
+    &_boxStyle
+      &List
+        justify-content: flex-start
+      &OneElem
+        width: 130px
+        margin-right: 15px
+    &_boxForm
+      &List
+        flex-wrap: wrap
+        margin-bottom: -30px
+      &OneElemWrap
+        width: 33%
+      &OneElem
+        margin-bottom: 30px
+    &_boxArea
+      &OneElem
+        margin-right: 20px
   @media all and (max-width: $sizePhone)
     &_wrapper
       &Small
+        padding: 40px 20px
+      &Large
         padding: 40px 20px
     &_text
       font-size: 16px
@@ -60,5 +255,72 @@ $mainClass: '.lan-modal'
     &_smallForm
       &Input
         font-size: 13px
+        height: 48px
+        padding: 13px 20px
       &Submit
         font-size: 13px
+        height: 48px
+        padding: 13px 20px
+    &_box
+      padding: 15px
+    &_desc
+      font-size: 16px
+      line-height: 22px
+    &_boxForm
+      &Img
+        width: 56px
+        height: 56px
+      &Text
+        padding: 0 5px
+    &_boxArea
+      &List
+        flex-wrap: wrap
+        justify-content: space-between
+        margin-bottom: -15px
+      &OneElemWrap
+        width: calc(50% - 6px)
+        margin-bottom: 15px
+      &OneElem
+        margin-right: 0
+      &Text
+        padding: 15px 5px
+        min-width: 0
+    &_largeForm
+      &Input
+        width: 100%
+        margin-right: 0
+        max-width: 100%
+        margin-bottom: 10px
+        border-radius: 5px
+        height: 48px
+        font-size: 13px
+        padding: 13px 20px
+      &Submit
+        width: 100%
+        border-radius: 5px
+        height: 48px
+        font-size: 13px
+        padding: 13px 20px
+    &_boxStyle
+      &List
+        flex-wrap: wrap
+        margin-bottom: -15px
+        justify-content: space-between
+      &OneElem
+        margin-right: 0
+        width: 100%
+      &OneElemWrap
+        margin-bottom: 15px
+        width: calc(50% - 6px)
+      &ImgSrc
+        max-width: 100%
+  @media all and (max-width: 350px)
+    &_boxStyle
+      &OneElem
+        margin-right: 0
+        width: 100%
+      &OneElemWrap
+        margin-bottom: 15px
+        width: 100%
+      &ImgSrc
+        max-width: 100%

@@ -1,11 +1,153 @@
+{% set kitchenStyles = [
+  {
+    'imgname': 'img1',
+    'text': 'Modern Style'
+  },
+  {
+    'imgname': 'img2',
+    'text': 'Loft Kitchens'
+  },
+  {
+    'imgname': 'img3',
+    'text': 'Classic Style'
+  },
+  {
+    'imgname': 'img4',
+    'text': 'Other'
+  },
+]
+%}
+{% set kitchenForms = [
+  {
+    'imgname': 'form1',
+    'text': 'Straight Kitchen'
+  },
+  {
+    'imgname': 'form2',
+    'text': 'Corner kitchen'
+  },
+  {
+    'imgname': 'form3',
+    'text': 'U-shaped kitchen'
+  },
+  {
+    'imgname': 'form4',
+    'text': 'Parallel kitchen'
+  },
+  {
+    'imgname': 'form5',
+    'text': 'Kitchen with an island'
+  },
+  {
+    'imgname': 'form6',
+    'text': 'Other forms'
+  },
+]
+%}
+{% set kitchenArea = [
+  {
+    'text': 'Up to 5 m<sup>2</sup>'
+  },
+  {
+    'text': 'Up to 8 m<sup>2</sup>'
+  },
+  {
+    'text': 'Up to 15 m<sup>2</sup>'
+  },
+  {
+    'text': 'Other'
+  },
+]
+%}
+
 <div id="callback" class="lan-modal_wrapper lan-modal_wrapperSmall mfp-hide">
   <div class="lan-modal_text">Leave your phone number now and our designer will contact you shortly!</div>
   <form class="lan-modal_smallForm">
-    <input type="text" class="lan-modal_smallFormInput js-phoneMask" placeholder="Your phone">
+    <input type="text" name="phone" class="lan-modal_smallFormInput js-phoneMask" placeholder="Your phone">
     <input type="submit" class="lan-modal_smallFormSubmit" value="Get Catalog">
   </form>
 </div>
 
-<div id="cost" class="lan-modal_wrapper mfp-hide">
-  Cost
+<div id="cost" class="lan-modal_wrapper lan-modal_wrapperLarge mfp-hide">
+  <div class="lan-modal_title">Find out <span class="lan-base_clrRed">the price of your kitchen</span></div>
+  <form id="costForm">
+    <div class="lan-modal_box">
+      <div class="lan-modal_boxTitle">Style:</div>
+      <div class="lan-modal_boxStyleList">
+        {% for item in kitchenStyles %}
+        <div class="lan-modal_boxStyleOneElemWrap">
+          <input type="radio" name="style" class="lan-modal_boxStyleRadio" value="{{ item.text }}" id="style_{{ item.imgname }}">
+          <label for="style_{{ item.imgname }}">
+            <div class="lan-modal_boxStyleOneElem">
+              <div class="lan-modal_boxStyleImg">
+                <picture>
+                  <source srcset="./img/modal/{{ item.imgname }}.avif 1x, ./img/modal/{{ item.imgname }}@2x.avif 2x" type="image/avif">
+                  <source srcset="./img/modal/{{ item.imgname }}.webp 1x, ./img/modal/{{ item.imgname }}@2x.webp 2x" type="image/webp">
+                  <img class="lan-modal_boxStyleImgSrc" src="./img/modal/{{ item.imgname }}.jpg" alt="Style" srcset="./img/modal/{{ item.imgname }}.jpg 1x, ./img/modal/{{ item.imgname }}@2x.jpg 2x">
+                </picture>
+              </div>
+              <div class="lan-modal_boxStyleText">
+                {{ item.text }}
+              </div>
+            </div>
+          </label>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+
+    <div class="lan-modal_box">
+      <div class="lan-modal_boxTitle">Form:</div>
+      <div class="lan-modal_boxFormList">
+        {% for item in kitchenForms %}
+        <div class="lan-modal_boxFormOneElemWrap">
+        <input type="radio" name="form" class="lan-modal_boxFormRadio" value="{{ item.text }}" id="form_{{ item.imgname }}">
+          <label for="form_{{ item.imgname }}">
+            <div class="lan-modal_boxFormOneElem">
+              <div class="lan-modal_boxFormImg">
+                {% include '../../img/modal/'~ item.imgname ~'.svg' %}
+              </div>
+              <div class="lan-modal_boxFormText">
+                {{ item.text }}
+              </div>
+            </div>
+          </label>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+
+    <div class="lan-modal_box">
+      <div class="lan-modal_boxTitle">Kitchen area:</div>
+      <div class="lan-modal_boxAreaList">
+        {% for item in kitchenArea %}
+        <div class="lan-modal_boxAreaOneElemWrap">
+          <input type="radio" name="area" class="lan-modal_boxAreaRadio" value="{{ item.text|striptags }}" id="area_{{ loop.index }}">
+          <label for="area_{{ loop.index }}">
+            <div class="lan-modal_boxAreaOneElem">
+              <div class="lan-modal_boxAreaText">
+                {{ item.text }}
+              </div>
+            </div>
+          </label>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+
+    <div class="lan-modal_desc">Leave your phone number now and our designer will contact you shortly!</div>
+
+    <div class="lan-modal_largeForm">
+      <input type="text" name="phone" class="lan-modal_largeFormInput js-phoneMask" placeholder="Your phone">
+      <input type="submit" class="lan-modal_largeFormSubmit" value="Calculate the cost">
+    </div>
+  </form>
+
+  <script>
+    // DEMO: get data in console after click submit
+    document.querySelector('#costForm').addEventListener('submit', (e) => {
+      e.preventDefault();
+      console.log(Object.fromEntries(new FormData(e.target).entries()))
+    });
+  </script>
 </div>
