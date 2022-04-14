@@ -1,3 +1,24 @@
 $mainClass: '.lan-footer'
 
 #{$mainClass}
+  background-color: #F1F1F1
+  padding: 45px 0
+  color: #A0A8B1
+  font-weight: 500
+  font-size: 14px
+  line-height: 16px
+  &_policyLink
+    color: #A0A8B1
+  &_flex
+    display: flex
+    justify-content: space-between
+  &_policy
+    margin-bottom: 10px
+  @media all and (max-width: $sizeTablet)
+    padding: 20px 0
+    font-weight: 400
+    &_flex
+      display: block
+      &Left
+        width: 100%
+        margin-bottom: 10px
