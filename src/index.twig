@@ -58,6 +58,7 @@
     ]
     %}
 
+
     <!-- page -->
     <div class="lan-base_shadow js-bodyShadow"></div>
     {% include 'components/stickMenu/stickMenu.twig' with menu %}
@@ -66,6 +67,10 @@
     <main>
       {% include 'components/mainScreen/mainScreen.twig'%}
       {% include 'components/utp/utp.twig'%}
+
+      {% include 'components/mainScreen/mainScreen.twig' with {'second': true} %}
+
+      {% include 'components/contacts/contacts.twig'%}
     </main>
 
     {% include 'components/footer/footer.twig'%}
