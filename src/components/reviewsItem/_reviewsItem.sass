@@ -1,3 +1,95 @@
 $mainClass: '.lan-reviewsItem'
 
 #{$mainClass}
+  background: $clrWhite
+  box-shadow: 0px 4px 20px rgba(150, 150, 150, 0.25)
+  border-radius: 15px
+  padding: 40px 45px
+  margin-top: 20px
+  margin-bottom: 20px
+  &_topBlockLeft
+    display: none
+  &_date
+    font-weight: 600
+    font-size: 16px
+    line-height: 18px
+    color: #818181
+    margin-bottom: 20px
+  &_name
+    font-weight: 800
+    font-size: 24px
+    line-height: 28px
+    margin-bottom: 7px
+  &_stars
+    margin-bottom: 20px
+  &_text
+    font-weight: 400
+    font-size: 16px
+    line-height: 26px
+    margin-bottom: 20px
+  &_btn
+    background-color: $clrRed
+    color: $clrWhite
+    font-weight: 700
+    font-size: 14px
+    border-radius: 5px
+    padding: 17px 50px
+    text-decoration: none
+    white-space: nowrap
+    display: inline-block
+    &:hover
+      background-color: $clrRedBlack
+  &_flex
+    display: flex
+  &_images
+    display: flex
+    margin-left: 55px
+  &_image1
+    margin-right: 30px
+    border-radius: 15px
+    overflow: hidden
+  &_image2
+    border-radius: 15px
+    overflow: hidden
+  &_btnContainer
+    &Tablet
+      display: none
+  .svg-starFill
+    margin-right: 2px
+  @media all and (max-width: $sizeTablet)
+    &_flex
+      display: block
+    &_btnContainer
+      display: none
+      &Tablet
+        display: block
+        text-align: center
+    &_images
+      margin-left: 0
+      width: 100%
+      justify-content: center
+      margin-bottom: 20px
+  @media all and (max-width: $sizePhone)
+    margin-bottom: 50px
+    padding: 40px 30px
+    &_topBlockLeft
+      display: block
+      margin-right: 12px
+    &_stars
+      margin-bottom: 0
+    &_topBlock
+      display: flex
+      align-items: center
+      margin-bottom: 20px
+      &Img
+        border-radius: 50%
+        overflow: hidden
+        height: 64px
+        width: 64px
+        &Src
+          width: 64px
+    &_image1
+      display: none
+    &_btn
+      padding: 17px 17px
+      width: 100%

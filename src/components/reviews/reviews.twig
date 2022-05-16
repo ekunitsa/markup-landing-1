@@ -1,5 +1,43 @@
+{% set reviews = [
+  {
+    'date': '12.10.2021',
+    'name': 'Irina Egorova',
+    'stars': 5,
+    'text': 'We ordered a kitchen for our apartment.  The design and quality we are completely satisfied. There were no problems with delivery, everything was delivered without delay and complete, nothing was damaged, experienced assemblers quickly and qualitatively assembled the entire kitchen. In addition, the company gave us a good discount, the attitude towards customers is very warm, thank you.',
+  },
+  {
+    'date': '03.08.2021',
+    'name': 'Elena Fedorova',
+    'stars': 5,
+    'text': 'My husband and I found the company "German Standard" on the Internet by chance. After talking to the designer, I decided to order my kitchen there! I was impressed by the work of Eugene and Alexander installers!  Not only do they know their job, but also very polite in their communication. They took into account all my wishes while installing the kitchen and the work was done quickly, cleanly and high quality! I have been using the kitchen for a year now and I\'m very pleased with it.',
+  },
+  {
+    'date': '12.05.2021',
+    'name': 'Nikolai Gritsenko',
+    'stars': 4,
+    'text': 'After reviewing most of the kitchen companies, my wife and I stumbled upon the company "German Standard", Krasnodar. We have been using the kitchen for four months now.  To date, we have not faced any problems, on the contrary, it has become more comfortable and pleasant to spend time in the kitchen. Everything has turned out just the way we wanted.',
+  },
+  {
+    'date': '25.11.2020',
+    'name': 'Olga Yukhnevich',
+    'stars': 2,
+    'text': 'For a long time we were looking for a place to order our kitchen furniture. By chance we found "German Standard" and asked if they can make a kitchen as we want. Made them the order. Completed all the deadlines (and even a little - a little earlier), high quality with all our wishes on the design and size. Thank you very much. A special thanks to Julia the designer for advising us in choosing materials and fittings. Everyone is polite, courteous, correct and friendly.',
+  },
+  {
+    'date': '16.09.2020',
+    'name': 'Viktor Stepanov',
+    'stars': 4,
+    'text': 'We decided to order a kitchen set for a small kitchen. Among the huge number of companies, we chose the company "German Standard" in Krasnodar, and now we can say with confidence that we did not make a mistake! We are grateful for the quality of our furniture. The designer Oksana took into account all our wishes. The installation guys work quickly, cleanly and quietly! Thank you very much the entire team! We will cooperate only with you in future!',
+  },
+] %}
+
 <div class="lan-reviews">
   <div class="lan-base_wrapper">
-    reviews
+    <div class="lan-base_globalTitle">We <span class="lan-base_clrRed">are grateful</span></div>
+    <div class="lan-reviews_list js-reviewsSlider">
+      {% for item in reviews %}
+        {% include '../../components/reviewsItem/reviewsItem.twig' %}
+      {% endfor %}
+    </div>
   </div>
 </div>

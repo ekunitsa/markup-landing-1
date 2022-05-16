@@ -1,3 +1,48 @@
 $mainClass: '.lan-reviews'
 
 #{$mainClass}
+  margin-bottom: 100px
+  overflow: hidden
+  &_list
+    margin-top: -20px
+    position: relative
+  &_leftArrow, &_rightArrow
+    position: absolute
+    width: 50px
+    height: 50px
+    top: calc(50% - 25px)
+    background-color: $clrRed
+    transition: all, 0.2s
+    display: flex
+    justify-content: center
+    align-items: center
+    border-radius: 50%
+    z-index: 10
+    cursor: pointer
+    &:hover
+      background-color: $clrRedBlack
+  &_leftArrow
+    left: -25px
+  &_rightArrow
+    right: -25px
+  @media all and (max-width: $sizeTablet)
+    margin-bottom: 60px
+  @media all and (max-width: $sizePhone)
+    margin-bottom: 50px
+    &_leftArrow, &_rightArrow
+      width: 39px
+      height: 39px
+      svg
+        width: 10px
+    &_leftArrow
+      left: -10px
+    &_rightArrow
+      right: -10px
+
+// slick
+.slick
+  &-list
+    padding: 0 20px
+    margin: 0px -60px
+  &-slide
+    margin: 0 40px

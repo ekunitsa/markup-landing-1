@@ -14,6 +14,7 @@ import '../components/modal/modal'
 import '../components/toTop/toTop'
 import '../components/header/header'
 import '../components/mobileMenu/mobileMenu'
+import '../components/reviews/reviews'
 
 // global js
 import 'jquery-mask-plugin'

@@ -55,6 +55,7 @@
     "body-scroll-lock": "^4.0.0-beta.0",
     "jquery": "^3.6.0",
     "jquery-mask-plugin": "^1.14.16",
-    "magnific-popup": "^1.1.0"
+    "magnific-popup": "^1.1.0",
+    "slick-carousel": "^1.8.1"
   }
 }

@@ -1,3 +1,58 @@
 <div class="lan-reviewsItem">
-  reviewsItem
+
+      <div class="lan-reviewsItem_date">
+        {{ item.date }}
+      </div>
+      <div class="lan-reviewsItem_topBlock">
+        <div class="lan-reviewsItem_topBlockLeft">
+          <div class="lan-reviewsItem_topBlockImg">
+            <picture>
+              <source srcset="./img/reviews/img{{ loop.index }}_1.avif 1x, ./img/reviews/img{{ loop.index }}_1@2x.avif 2x" type="image/avif">
+              <source srcset="./img/reviews/img{{ loop.index }}_1.webp 1x, ./img/reviews/img{{ loop.index }}_1@2x.webp 2x" type="image/webp">
+              <img class="lan-reviewsItem_topBlockImgSrc" src="./img/reviews/img{{ loop.index }}_1.jpg" alt="{{ item.name }}" srcset="./img/reviews/img{{ loop.index }}_1.jpg 1x, ./img/modal/img{{ loop.index }}_1@2x.jpg 2x">
+            </picture>
+          </div>
+        </div>
+        <div class="lan-reviewsItem_topBlockRight">
+          <div class="lan-reviewsItem_name">
+            {{ item.name }}
+          </div>
+          <div class="lan-reviewsItem_stars">
+            {% for i in 1..item.stars %}
+              {% include '../../img/star_fill.svg' %}
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+  <div class="lan-reviewsItem_flex">
+    <div class="lan-reviewsItem_left">
+      <div class="lan-reviewsItem_text">
+        {{ item.text }}
+      </div>
+      <div class="lan-reviewsItem_btnContainer">
+        <a href="#cost" class="lan-reviewsItem_btn js-modal">Get the design project</a>
+      </div>
+    </div>
+    <div class="lan-reviewsItem_right">
+      <div class="lan-reviewsItem_images">
+        <div class="lan-reviewsItem_image1">
+          <picture>
+            <source srcset="./img/reviews/img{{ loop.index }}_1.avif 1x, ./img/reviews/img{{ loop.index }}_1@2x.avif 2x" type="image/avif">
+            <source srcset="./img/reviews/img{{ loop.index }}_1.webp 1x, ./img/reviews/img{{ loop.index }}_1@2x.webp 2x" type="image/webp">
+            <img class="lan-reviewsItem_img1Src" src="./img/reviews/img{{ loop.index }}_1.jpg" alt="{{ item.name }}" srcset="./img/reviews/img{{ loop.index }}_1.jpg 1x, ./img/modal/img{{ loop.index }}_1@2x.jpg 2x">
+          </picture>
+        </div>
+        <div class="lan-reviewsItem_image2">
+          <picture>
+            <source srcset="./img/reviews/img{{ loop.index }}_2.avif 1x, ./img/reviews/img{{ loop.index }}_2@2x.avif 2x" type="image/avif">
+            <source srcset="./img/reviews/img{{ loop.index }}_2.webp 1x, ./img/reviews/img{{ loop.index }}_2@2x.webp 2x" type="image/webp">
+            <img class="lan-reviewsItem_img2Src" src="./img/reviews/img{{ loop.index }}_2.jpg" alt="{{ item.name }}" srcset="./img/reviews/img{{ loop.index }}_2.jpg 1x, ./img/modal/img{{ loop.index }}_2@2x.jpg 2x">
+          </picture>
+        </div>
+      </div>
+      <div class="lan-reviewsItem_btnContainer lan-reviewsItem_btnContainerTablet">
+        <a href="#cost" class="lan-reviewsItem_btn js-modal">Get the design project</a>
+      </div>
+    </div>
+  </div>
 </div>

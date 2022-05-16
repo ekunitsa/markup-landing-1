@@ -1,3 +1,84 @@
 $mainClass: '.lan-questions'
 
+@mixin box
+  background: $clrWhite
+  box-shadow: 0 4px 20px rgba(150, 150, 150, 0.25)
+  border-radius: 15px
+  width: 100%
+  padding: 30px 20px 30px 80px
+  background-repeat: no-repeat
+  background-position: 20px center
+  font-weight: 600
+  font-size: 15px
+  line-height: 25px
+  background-size: 42px 42px
+  @media all and (max-width: $sizePhone)
+    padding: 25px 15px 25px 65px
+    background-size: 35px 35px
+    background-position: 17px center
+
 #{$mainClass}
+  margin-bottom: 100px
+  &_grid
+    display: grid
+    grid-template: "a c d" "b c d"
+    row-gap: 40px
+    column-gap: 100px
+    padding: 0 70px
+  &_cell
+    &Time
+      grid-area: a
+    &Adrs
+      grid-area: b
+    &Photo
+      grid-area: c
+      text-align: center
+      font-weight: 800
+      font-size: 20px
+      display: flex
+      justify-content: center
+      flex-direction: column
+    &Phone
+      grid-area: d
+      display: flex
+      align-items: center
+  &_time
+    @include box
+    background-image: url(../../img/questions/clock.svg)
+  &_adrs
+    @include box
+    background-image: url(../../img/questions/place.svg)
+  &_phone
+    @include box
+    background-image: url(../../img/questions/phone.svg)
+    white-space: nowrap
+  &_name
+    margin-top: 30px
+  &_imgSrc
+    border-radius: 50%
+    max-width: 100%
+  @media all and (max-width: $sizeTablet)
+    margin-bottom: 60px
+    &_grid
+      padding: 0
+      column-gap: 40px
+  @media all and (max-width: $sizePhone)
+    margin-bottom: 50px
+    &_grid
+      grid-template: "c" "d"
+      row-gap: 25px
+      column-gap: 0
+      padding: 0 55px
+    &_cell
+      &Time
+        display: none
+      &Adrs
+        display: none
+      &Phone
+        display: flex
+        justify-content: center
+    &_phone
+      width: auto
+  @media all and (max-width: 360px)
+    &_grid
+      padding: 0 25px

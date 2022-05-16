@@ -11,6 +11,8 @@ $mainClass: '.lan-contacts'
   &_map
     border-radius: 10px
     overflow: hidden
+  &_mobileInfo
+    display: none
   @media all and (max-width: $sizeTablet)
     padding-bottom: 60px
     &_title
@@ -21,3 +23,39 @@ $mainClass: '.lan-contacts'
     padding-bottom: 50px
     &_title
       margin-bottom: 30px
+    &_mobileInfo
+      display: block
+      background: $clrWhite
+      box-shadow: 0px 4px 20px rgba(150, 150, 150, 0.25)
+      border-radius: 15px
+      margin-left: 4px
+      margin-right: 4px
+      margin-top: -30px
+      position: relative
+      z-index: 2
+      padding: 30px 20px
+      font-weight: 600
+      font-size: 14px
+      line-height: 25px
+    &_phone
+      display: inline-block
+      text-decoration: none
+      color: initial
+      &:hover
+        color: $clrRedBlack
+    &_time, &_place
+      margin-bottom: 15px
+    &_time, &_place, &_phones
+      min-height: 50px
+      display: flex
+      align-items: center
+      padding-left: 55px
+      background:
+        position: left center
+        repeat: no-repeat
+    &_time
+      background-image: url(../../img/contacts/clock.svg)
+    &_place
+      background-image: url(../../img/contacts/place.svg)
+    &_phones
+      background-image: url(../../img/contacts/phone.svg)

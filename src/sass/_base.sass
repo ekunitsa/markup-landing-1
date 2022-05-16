@@ -41,6 +41,36 @@ a
     background: #0b0b0b
     opacity: 0.8
     display: none
+  &_globalTitle
+    font-weight: 800
+    font-size: 48px
+    line-height: 55px
+    padding-bottom: 24px
+    position: relative
+    margin-bottom: 50px
+    &:after
+      content: ''
+      position: absolute
+      width: 71px
+      height: 6px
+      background-color: $clrRed
+      bottom: 0
+      left: 0
+    &-center
+      text-align: center
+      &:after
+        margin-left: auto
+        margin-right: auto
+        right: 0
+
+  @media all and (max-width: $sizeTablet)
+    &_globalTitle
+      font-size: 32px
+      line-height: 37px
+      margin-bottom: 40px
+      &:after
+        width: 56px
+  //@media all and (max-width: $sizePhone)
 
 // plugins
 .mfp
