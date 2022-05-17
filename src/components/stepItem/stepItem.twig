@@ -1,3 +1,20 @@
 <div class="lan-stepItem">
-  reviewsItem
+  <div class="lan-stepItem_inner">
+    <div class="lan-stepItem_img">
+      <picture>
+        <source srcset="./img/steps/img{{ loop.index }}.avif 1x, ./img/steps/img{{ loop.index }}@2x.avif 2x" type="image/avif">
+        <source srcset="./img/steps/img{{ loop.index }}.webp 1x, ./img/steps/img{{ loop.index }}@2x.webp 2x" type="image/webp">
+        <img class="lan-stepItem_imgSrc" src="./img/steps/img{{ loop.index }}.jpg" alt="{{ item.title }}" srcset="./img/steps/img{{ loop.index }}.jpg 1x, ./img/steps/img{{ loop.index }}@2x.jpg 2x">
+      </picture>
+    </div>
+    <div class="lan-stepItem_container">
+      <div class="lan-stepItem_topLine">
+        <div class="lan-stepItem_number">{{ loop.index }}</div>
+        <div class="lan-stepItem_title">{{ item.title }}</div>
+      </div>
+      <div class="lan-stepItem_text">
+        {{ item.text }}
+      </div>
+    </div>
+  </div>
 </div>

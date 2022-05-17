@@ -1,5 +1,37 @@
+{% set steps = [
+  {
+    'title': 'Application',
+    'text': '<a href="#callback" class="js-modal">You leave a request</a> or call us <a href="tel:+79892779430" class="lan-stepItem_nowrap">+7 (989) 277-94-30</a> Our specialist will tell you in detail about the features of our kitchens, payment options and its installation.',
+  },
+  {
+    'title': 'Designer Consultation ',
+    'text': 'Our designers from 9:00 to 21:00 will help you find the perfect kitchen, measure, make a project and calculate the cost.			',
+  },
+  {
+    'title': 'Contracting',
+    'text': 'We sign the contract, give out the check, we draw up installments, we agree convenient for you time of delivery and assembly.',
+  },
+  {
+    'title': 'Kitchen delivery and assembly',
+    'text': 'We will bring your kitchen, assemble and install it. Work time depends on the material you choose and the list of additional work. After assembly, we clean up and take out the trash.',
+  },
+  {
+    'title': 'Congratulations!<br> Your kitchen is ready!',
+    'text': 'Now you can enjoy time with your family in your new kitchen.',
+  },
+] %}
+
 <div class="lan-step">
   <div class="lan-base_wrapper">
-    step
+    <div class="lan-base_globalTitle">5 steps to your <span class="lan-base_clrRed">perfect kitchen</span></div>
+    <div class="lan-step_list">
+      {% for item in steps %}
+        {% include '../../components/stepItem/stepItem.twig' %}
+      {% endfor %}
+    </div>
+    <div class="lan-step_btns">
+      <a href="#cost" class="lan-step_btn js-modal">Calculate the cost</a>
+      <a href="#callback" class="lan-step_btnInvert js-modal">Get the whole catalog</a>
+    </div>
   </div>
 </div>

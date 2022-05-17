@@ -1,3 +1,53 @@
 $mainClass: '.lan-stepItem'
 
 #{$mainClass}
+  width: 33.332%
+  border: 22px solid transparent
+  &_inner
+    background: $clrWhite
+    box-shadow: 0 4px 20px rgba(150, 150, 150, 0.25)
+    border-radius: 15px
+    width: 100%
+    height: 100%
+    overflow: hidden
+  &_imgSrc
+    width: 100%
+  &_container
+    padding: 20px
+  &_topLine
+    display: flex
+    align-items: center
+    margin-bottom: 15px
+  &_number
+    border: 1px solid $clrRed
+    border-radius: 50%
+    margin-right: 10px
+    display: flex
+    justify-content: center
+    align-items: center
+    font-weight: 800
+    font-size: 16px
+    color: $clrRed
+    width: 35px
+    min-width: 35px
+    height: 35px
+  &_title
+    font-weight: 700
+    font-size: 16px
+    line-height: 18px
+  &_text
+    font-weight: 600
+    font-size: 14px
+    line-height: 22px
+    a
+      color: $clrRed
+      &:hover
+        text-decoration: none
+  &_nowrap
+    white-space: nowrap
+  @media all and (max-width: $sizeTablet)
+    border: 15px solid transparent
+  @media all and (max-width: $sizePhone)
+    border: 0px
+    margin-bottom: 30px
+    width: 100%
