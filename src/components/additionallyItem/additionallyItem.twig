@@ -1,0 +1,19 @@
+<div class="lan-additionallyItem">
+  <div class="lan-additionallyItem_inner">
+    <div class="lan-additionallyItem_img">
+      <picture>
+        <source srcset="./img/additionally/img{{ loop.index }}.avif 1x, ./img/additionally/img{{ loop.index }}@2x.avif 2x" type="image/avif">
+        <source srcset="./img/additionally/img{{ loop.index }}.webp 1x, ./img/additionally/img{{ loop.index }}@2x.webp 2x" type="image/webp">
+        <img class="lan-additionallyItem_imgSrc" src="./img/additionally/img{{ loop.index }}.jpg" alt="{{ item.title }}" srcset="./img/additionally/img{{ loop.index }}.jpg 1x, ./img/additionally/img{{ loop.index }}@2x.jpg 2x">
+      </picture>
+    </div>
+    <div class="lan-additionallyItem_container">
+      <div class="lan-additionallyItem_title">
+        {{ item.title }}
+      </div>
+      <div class="lan-additionallyItem_btnContainer">
+        <a href="#callback" class="lan-additionallyItem_btn js-modal">Get advice</a>
+      </div>
+    </div>
+  </div>
+</div>

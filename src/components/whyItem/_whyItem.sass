@@ -1,3 +1,64 @@
 $mainClass: '.lan-whyItem'
 
 #{$mainClass}
+  width: 33.332%
+  border: 22px solid transparent
+  &_imgLink
+    display: none
+    background-color: $clrRed
+    color: $clrWhite
+    font-weight: 700
+    font-size: 14px
+    border-radius: 5px
+    padding: 17px 50px
+    text-decoration: none
+    white-space: nowrap
+    margin: 0 10px
+    border: 1px solid $clrRed
+    text-align: center
+    &:hover
+      background-color: $clrRedBlack
+  &_img
+    margin-bottom: 15px
+    border-radius: 8px
+    overflow: hidden
+    position: relative
+    &Src
+      width: 100%
+      display: block
+      border-radius: 8px
+    &:hover
+      &:before
+        content: ''
+        width: 100%
+        height: 100%
+        position: absolute
+        top: 0
+        left: 0
+        background-color: rgba(255, 255, 255, 0.65)
+      #{$mainClass}
+        &_imgLink
+          display: block
+          position: absolute
+          left: 50%
+          top: 50%
+          transform: translate(-50%, -50%)
+
+  &_title
+    font-weight: 700
+    font-size: 18px
+    line-height: 21px
+    margin-bottom: 10px
+  &_text
+    font-weight: 400
+    font-size: 16px
+    line-height: 23px
+    color: #0C0C0C
+  @media all and (max-width: $sizeTablet)
+    border: 15px solid transparent
+    &_imgLink
+      padding: 10px 30px
+  @media all and (max-width: $sizePhone)
+    border: 0px
+    margin-bottom: 30px
+    width: 100%

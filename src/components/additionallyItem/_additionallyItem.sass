@@ -1,0 +1,55 @@
+$mainClass: '.lan-additionallyItem'
+
+#{$mainClass}
+  width: 33.332%
+  border: 22px solid transparent
+  &_inner
+    background: $clrWhite
+    box-shadow: 0 4px 20px rgba(150, 150, 150, 0.25)
+    border-radius: 15px
+    width: 100%
+    height: 100%
+    overflow: hidden
+  &_imgSrc
+    width: 100%
+    display: block
+  &_container
+    padding: 25px 20px
+  &_title
+    font-weight: 600
+    font-size: 18px
+    line-height: 21px
+    margin-bottom: 25px
+    br
+      display: none
+  &_text
+    font-weight: 600
+    font-size: 14px
+    line-height: 22px
+  &_btn
+    background-color: $clrRed
+    color: $clrWhite
+    font-weight: 700
+    font-size: 14px
+    border-radius: 5px
+    padding: 17px 50px
+    text-decoration: none
+    white-space: nowrap
+    display: inline-block
+    border: 1px solid $clrRed
+    &:hover
+      background-color: $clrRedBlack
+  @media all and (max-width: $sizeTablet)
+    border: 15px solid transparent
+    &_title
+      br
+        display: block
+  @media all and (max-width: $sizePhone)
+    border: 0px
+    margin-bottom: 30px
+    width: 100%
+    &_title
+      br
+        display: none
+
+

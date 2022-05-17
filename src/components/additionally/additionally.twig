@@ -1,5 +1,25 @@
+{% set additionally = [
+  {
+    'title': 'Connecting kitchen<br> appliances',
+    'link': '#callback',
+  },
+  {
+    'title': 'Connecting<br> the lighting',
+    'link': '#callback',
+  },
+  {
+    'title': 'Plumbing<br> connection',
+    'link': '#callback',
+  },
+] %}
+
 <div class="lan-additionally">
   <div class="lan-base_wrapper">
-    additionally
+    <div class="lan-base_globalTitle">Our <span class="lan-base_clrRed">additional<br> solutions</span> for your kitchen</div>
+    <div class="lan-additionally_list">
+      {% for item in additionally %}
+        {% include '../../components/additionallyItem/additionallyItem.twig' %}
+      {% endfor %}
+    </div>
   </div>
 </div>

@@ -1,5 +1,48 @@
+{% set why = [
+  {
+    'title': 'Modern facades',
+    'text': 'Our facades are <b>40%</b> more durable than conventional facades because they are moisture-resistant and not subject to damage. More than <b>250</b> textures and <b>2,000</b> shades are available.',
+    'link': '#callback',
+  },
+  {
+    'title': 'Durable countertops',
+    'text': 'Our countertops are <b>25%</b> stronger and twice as waterproof as conventional countertops. We have <b>10</b> coatings and <b>170</b> color and texture options.',
+    'link': '#callback',
+  },
+  {
+    'title': 'Durable and functional fittings',
+    'text': 'Withstands more than <b>20</b> years of service. Creates maximum comfort and convenience in the kitchen.',
+    'link': '#callback',
+  },
+  {
+    'title': 'Full set of documents',
+    'text': 'You will receive: a contract, a cash register receipt, a warranty card and operating instructions. This guarantees the protection of your rights.',
+    'link': '#callback',
+  },
+  {
+    'title': 'Experienced and courteous assemblers',
+    'text': 'Our assemblers are polite and neat. They will assemble, install and remove construction debris. They have at least <b>6</b> years of experience with kitchens.',
+    'link': '#callback',
+  },
+  {
+    'title': 'Free delivery and kitchen assembly',
+    'text': 'We will deliver, assemble and install your kitchen for free anywhere in Krasnodar.',
+    'link': '#callback',
+  },
+] %}
+
 <div class="lan-why">
   <div class="lan-base_wrapper">
-    why
+    <div class="lan-base_globalTitle">Why choose <span class="lan-base_clrRed">our kitchens?</span></div>
+
+    <div class="lan-why_list">
+      {% for item in why %}
+        {% include '../../components/whyItem/whyItem.twig' %}
+      {% endfor %}
+    </div>
+    <div class="lan-why_btns">
+      <a href="#cost" class="lan-why_btn js-modal">Calculate the cost</a>
+      <a href="#callback" class="lan-why_btnInvert js-modal">Get the whole catalog</a>
+    </div>
   </div>
 </div>
