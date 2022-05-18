@@ -10,6 +10,7 @@ $(document).ready(function() {
       open: function () {
         if(!window.matchMedia("(pointer: coarse)").matches && window.innerWidth >= 768) {
           $('body > header').css('padding-right', 15);
+          $('.js-stickMenu').css('padding-right', 15);
         }
         disableBodyScroll(targetElement, {
           reserveScrollBarGap: true,
@@ -17,6 +18,7 @@ $(document).ready(function() {
       },
       close: function () {
         $('body > header').css('padding-right', 0);
+        $('.js-stickMenu').css('padding-right', 0);
         enableBodyScroll(targetElement);
       }
     }

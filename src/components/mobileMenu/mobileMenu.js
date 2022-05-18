@@ -19,4 +19,8 @@ $(function(){
   $('.js-mobileMenuClose').on('click', function() {
     closeMenu();
   })
+
+  $('.js-menuItemMobile').on('click', function() {
+    closeMenu();
+  })
 })

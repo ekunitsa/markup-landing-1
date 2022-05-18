@@ -1,5 +1,76 @@
-<div class="lan-kitchen">
+{% set kitchen = [
+  {
+    'material': 'plastic',
+    'fittings': 'Fennel',
+    'countertop': 'Postforming',
+    'priceOld': '26 850',
+    'priceNew': '19 990',
+  },
+  {
+    'material': 'Painted MDF',
+    'fittings': 'Braun',
+    'countertop': 'Compact plate',
+    'priceOld': '28 620',
+    'priceNew': '21 200',
+  },
+  {
+    'material': 'plastic',
+    'fittings': 'Fennel',
+    'countertop': 'Postforming',
+    'priceOld': '26 850',
+    'priceNew': '19 990',
+  },
+  {
+    'material': 'Painted MDF',
+    'fittings': 'Braun',
+    'countertop': 'Compact plate',
+    'priceOld': '28 620',
+    'priceNew': '21 200',
+  },
+  {
+    'material': 'plastic',
+    'fittings': 'Blum',
+    'countertop': 'Postforming',
+    'priceOld': '32 900',
+    'priceNew': '24 400',
+  },
+  {
+    'material': 'plastic',
+    'fittings': 'Fennel',
+    'countertop': 'Postforming',
+    'priceOld': '26 850',
+    'priceNew': '19 990',
+  },
+  {
+    'material': 'Veneered MDF',
+    'fittings': 'Blum',
+    'countertop': 'Postforming',
+    'priceOld': '28 620',
+    'priceNew': '21 200',
+  },
+  {
+    'material': 'plastic',
+    'fittings': 'Braun',
+    'countertop': 'Compact plate',
+    'priceOld': '32 900',
+    'priceNew': '24 400',
+  },
+  {
+    'material': 'plastic',
+    'fittings': 'Blum',
+    'countertop': 'Postforming',
+    'priceOld': '32 900',
+    'priceNew': '24 400',
+  },
+] %}
+
+<section class="lan-kitchen" data-scroll="prices">
   <div class="lan-base_wrapper">
-    kitchen
+    <div class="lan-base_globalTitle">What kind of<br> <span class="lan-base_clrRed">kitchens do we produce?</span></div>
+    <div class="lan-kitchen_list">
+      {% for item in kitchen %}
+        {% include '../../components/kitchenItem/kitchenItem.twig' %}
+      {% endfor %}
+    </div>
   </div>
-</div>
+</section>

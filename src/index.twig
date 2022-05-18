@@ -28,31 +28,31 @@
     <!-- variables -->
     {% set menu = [
       {
-        'link': 'javascript:',
+        'link': '#prices',
         'text': 'Prices'
       },
       {
-        'link': 'javascript:',
+        'link': '#promotion',
         'text': 'Promotion'
       },
       {
-        'link': 'javascript:',
+        'link': '#materials',
         'text': 'Materials'
       },
       {
-        'link': 'javascript:',
+        'link': '#how',
         'text': 'How to order'
       },
       {
-        'link': 'javascript:',
+        'link': '#prices',
         'text': 'Our works'
       },
       {
-        'link': 'javascript:',
+        'link': '#reviews',
         'text': 'Reviews'
       },
       {
-        'link': 'javascript:',
+        'link': '#contacts',
         'text': 'Contacts'
       },
     ]
@@ -67,7 +67,9 @@
     <main>
       {% include 'components/mainScreen/mainScreen.twig'%}
       {% include 'components/utp/utp.twig'%}
-
+      {% include 'components/kitchen/kitchen.twig'%}
+      {% include 'components/model/model.twig'%}
+      {% include 'components/connect/connect.twig'%}
       {% include 'components/additionally/additionally.twig'%}
       {% include 'components/why/why.twig'%}
       {% include 'components/step/step.twig'%}

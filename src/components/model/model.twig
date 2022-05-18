@@ -1,5 +1,31 @@
-<div class="lan-model">
+{% set model = [
+  {
+    'title': 'Modern kitchens',
+    'text': 'We have over <b class="lan-base_clrRed">650</b> models of modern kitchens.',
+    'link': '#callback',
+  },
+  {
+    'title': 'Loft Kitchens',
+    'text': 'We have over <b class="lan-base_clrRed">470</b> models of Loft style kitchens.',
+    'link': '#callback',
+  },
+  {
+    'title': 'Classic kitchens',
+    'text': 'We have over <b class="lan-base_clrRed">730</b> models of classic kitchens.',
+    'link': '#callback',
+  },
+
+] %}
+
+<section class="lan-model" data-scroll="promotion">
   <div class="lan-base_wrapper">
-    model
+    <div class="lan-base_globalTitle">Can't find the model you want?<br> <span class="lan-base_clrRed">We have it for sure!</span></div>
+    <div class="lan-base_globalDesc">We have installed over <b class="lan-base_clrRed">3,000</b> custom kitchens!<br><br>Get a detailed catalog</div>
+
+    <div class="lan-model_list">
+      {% for item in model %}
+        {% include '../../components/modelItem/modelItem.twig' %}
+      {% endfor %}
+    </div>
   </div>
-</div>
+</section>

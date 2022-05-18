@@ -1,0 +1,29 @@
+<div class="lan-kitchenItem">
+  <div class="lan-kitchenItem_inner">
+    <div class="lan-kitchenItem_img">
+      <picture>
+        <source srcset="./img/kitchen/img{{ loop.index }}.avif 1x, ./img/kitchen/img{{ loop.index }}@2x.avif 2x" type="image/avif">
+        <source srcset="./img/kitchen/img{{ loop.index }}.webp 1x, ./img/kitchen/img{{ loop.index }}@2x.webp 2x" type="image/webp">
+        <img class="lan-kitchenItem_imgSrc" src="./img/kitchen/img{{ loop.index }}.jpg" alt="{{ item.title }}" srcset="./img/kitchen/img{{ loop.index }}.jpg 1x, ./img/kitchen/img{{ loop.index }}@2x.jpg 2x">
+      </picture>
+    </div>
+    <div class="lan-kitchenItem_container">
+      <div class="lan-kitchenItem_oneline">
+        <span class="lan-kitchenItem_name">Facade material:</span> <span class="lan-kitchenItem_value">{{ item.material }}</span>
+      </div>
+      <div class="lan-kitchenItem_oneline">
+        <span class="lan-kitchenItem_name">Fittings:</span> <span class="lan-kitchenItem_value">{{ item.fittings }}</span>
+      </div>
+      <div class="lan-kitchenItem_oneline">
+        <span class="lan-kitchenItem_name">Countertop:</span> <span class="lan-kitchenItem_value">{{ item.countertop }}</span>
+      </div>
+      <div class="lan-kitchenItem_oneline lan-kitchenItem_onelineCost">
+        <span class="lan-kitchenItem_name">Price:</span> <span class="lan-kitchenItem_priceOld">from <span>{{ item.priceOld }}</span></span> <span class="lan-kitchenItem_priceNew">{{ item.priceNew }} ₽ l/m</span>
+      </div>
+      <div class="lan-kitchenItem_btnContainer">
+        <div><a href="#callback" class="lan-kitchenItem_btnInvert js-modal">Get Catalog</a></div>
+        <div><a href="#cost" class="lan-kitchenItem_btn js-modal">Calculate the cost</a></div>
+      </div>
+    </div>
+  </div>
+</div>

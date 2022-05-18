@@ -1,17 +1,19 @@
 $mainClass: '.lan-stickMenu'
 
 #{$mainClass}
-  background-color: rgba(255,255,255,.9)
-  box-shadow: 0 4px 16px rgb(199 199 199 / 44%)
-  padding: 15px 0
   position: fixed
   top: 0
   left: 0
-  width: 100%
-  height: 80px
   z-index: 1000
-  transition: all, 0.5s
-  margin-top: -80px
+  width: 100%
+  &_wrapper
+    background-color: rgba(255,255,255,.9)
+    box-shadow: 0 4px 16px rgb(199 199 199 / 44%)
+    padding: 15px 0
+    width: 100%
+    height: 80px
+    transition: margin-top, 0.5s
+    margin-top: -80px
   &_flex
     display: flex
   &_logoImg
@@ -37,10 +39,13 @@ $mainClass: '.lan-stickMenu'
     &:hover, &.is-active
       border-bottom: 3px solid $clrRed
   &_stick
-    margin-top: 0
+    #{$mainClass}
+      &_wrapper
+        margin-top: 0
   @media all and (max-width: $sizeTablet)
-    height: 65px
-    margin-top: -65px
+    &_wrapper
+      height: 65px
+      margin-top: -65px
     &_link
       font-size: 15px
       line-height: 20px
@@ -48,6 +53,9 @@ $mainClass: '.lan-stickMenu'
     &_logo
       display: none
     &_stick
-      margin-top: 0
+      #{$mainClass}
+        &_wrapper
+          margin-top: 0
   @media all and (max-width: $sizePhone)
-    display: none
+    &_wrapper
+      display: none
