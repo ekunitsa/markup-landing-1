@@ -1,5 +1,47 @@
+{% set connect = [
+  {
+    'text': '<b class="lan-base_clrRed">Julia</b>, Kitchen Designer, has been working since <b class="lan-base_clrRed">2013</b>',
+  },
+  {
+    'text': '<b class="lan-base_clrRed">Oksana</b>, Kitchen Designer, has been working since <b class="lan-base_clrRed">2011</b>',
+  },
+  {
+    'text': '<b class="lan-base_clrRed">Tatiana</b>, Kitchen Designer, working since <b class="lan-base_clrRed">2015</b>',
+  },
+] %}
+
 <section class="lan-connect">
   <div class="lan-base_wrapper">
-    <div class="lan-base_globalTitle">Don't know what<br> <span class="lan-base_clrRed">kitchen design to choose?</span></div>
+    <h2 class="lan-base_globalTitle">Don't know what<br> <span class="lan-base_clrRed">kitchen design to choose?</span></h2>
+
+    <div class="lan-connect_flex">
+      <div class="lan-connect_left">
+        <div class="lan-connect_slider js-connectSlider">
+          {% for item in connect %}
+            {% include '../../components/connectItem/connectItem.twig' %}
+          {% endfor %}
+        </div>
+      </div>
+      <div class="lan-connect_right">
+        <div class="lan-connect_miniTitle">
+          Contact our <span class="lan-base_clrRed">designers!</span>
+        </div>
+        <div class="lan-connect_text">
+          <p>More than 3,000 clients are grateful to our designers for:</p>
+          <ul>
+            <li>Scrupulous and patient work to create the perfect kitchen project.</li>
+            <li>Selection of materials with savings up to 60% without loss of quality.</li>
+            <li>100% compliance of the design project with reality.</li>
+          </ul>
+          <p>Leave your phone number and our designer will contact you shortly</p>
+        </div>
+        <div class="lan-connect_formWrapper">
+          <form class="lan-connect_form">
+            <input type="text" class="lan-connect_input js-phoneMask" placeholder="Your phone">
+            <input type="submit" class="lan-connect_submit" value="Get advice">
+          </form>
+        </div>
+      </div>
+    </div>
   </div>
 </section>

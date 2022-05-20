@@ -1,5 +1,13 @@
 <div class="lan-connectItem">
-  <div class="lan-base_wrapper">
-    connectItem
+  <div class="lan-connectItem_img">
+    <picture>
+      <source srcset="./img/connect/img{{ loop.index }}.avif 1x, ./img/connect/img{{ loop.index }}@2x.avif 2x" type="image/avif">
+      <source srcset="./img/connect/img{{ loop.index }}.webp 1x, ./img/connect/img{{ loop.index }}@2x.webp 2x" type="image/webp">
+      <img class="lan-connectItem_imgSrc" src="./img/connect/img{{ loop.index }}.jpg" alt="{{ item.title }}" srcset="./img/connect/img{{ loop.index }}.jpg 1x, ./img/connect/img{{ loop.index }}@2x.jpg 2x">
+    </picture>
+  </div>
+  
+  <div class="lan-connectItem_text">
+    {{ item.text }}
   </div>
 </div>

@@ -1,6 +1,10 @@
 <section class="lan-mainScreen {% if second %}lan-mainScreenSecond{% endif %}">
   <div class="lan-base_wrapper">
-    <h1 class="lan-mainScreen_title">Kitchens to order <span class="lan-mainScreen_titleSpan lan-base_clrRed">in Krasnodar</span></h1>
+    {% if second %}
+      <h2 class="lan-mainScreen_title">Kitchens to order <span class="lan-mainScreen_titleSpan lan-base_clrRed">in Krasnodar</span></h2>
+    {% else %}
+      <h1 class="lan-mainScreen_title">Kitchens to order <span class="lan-mainScreen_titleSpan lan-base_clrRed">in Krasnodar</span></h1>
+    {% endif %}
     <div class="lan-mainScreen_list">
       <div class="lan-mainScreen_oneItem lan-mainScreen_oneItemIcon1">Price from <span class="lan-base_clrRed lan-base_weightSemiBold">19990&nbsp;₽&nbsp;m./p.</span></div>
       <div class="lan-mainScreen_oneItem lan-mainScreen_oneItemIcon2">We will produce from <span class="lan-base_clrRed lan-base_weightSemiBold">7&nbsp;days</span></div>

@@ -19,6 +19,7 @@ $mainClass: '.lan-reviews'
     border-radius: 50%
     z-index: 10
     cursor: pointer
+    box-shadow: 0px 0px 23px rgba(148, 148, 148, 0.17)
     &:hover
       background-color: $clrRedBlack
   &_leftArrow
@@ -27,6 +28,10 @@ $mainClass: '.lan-reviews'
     right: -25px
   @media all and (max-width: $sizeTablet)
     margin-bottom: 60px
+    &_list
+      max-width: 90%
+      margin-left: auto
+      margin-right: auto
   @media all and (max-width: $sizePhone)
     margin-bottom: 50px
     &_leftArrow, &_rightArrow
@@ -38,11 +43,13 @@ $mainClass: '.lan-reviews'
       left: -10px
     &_rightArrow
       right: -10px
+    &_list
+      max-width: 100%
 
-// slick
-.slick
-  &-list
-    padding: 0 20px
-    margin: 0px -60px
-  &-slide
-    margin: 0 40px
+  // slick
+  .slick
+    &-list
+      padding: 0 20px
+      margin: 0px -60px
+    &-slide
+      margin: 0 40px
